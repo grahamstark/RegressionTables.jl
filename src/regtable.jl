@@ -464,7 +464,7 @@ function regtable(rr::Union{FixedEffectModel,TableRegressionModel}...;
     if renderSettings.outfile != ""
         close(outstream)
     else # else print the table
-        println(Compat.String(take!(copy(outstream))))
+        return Compat.String(take!(copy(outstream)))
     end
 
 end
